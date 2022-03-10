@@ -1,4 +1,10 @@
-# TheSlayers
+# Nighthawk Coding Society 2
+## Sponsor: Mr. Mortensen
+### Project Description
+A collection of minilabs with descriptions behind it 
+
+
+
 ## Contributers 
 | Name          | Role          | Github ID/Profile | Tasks   | Scrum Board Issues | Commits |
 | ------------- | ------------- | ----------------- | ------- | ------------------ | ------- |
