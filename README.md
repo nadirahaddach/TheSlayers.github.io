@@ -2,7 +2,7 @@
 ## Web Project 
 
 ### Project Description 
-A collection of minilabs with descriptions behind it. So far, we plan to use a random password generator, find your counselor form, binary search, and calculator. We want to highlight key collegeboard topics such as procedural abstraction (print function), lists (find your counselor form), conditonals (password generator), and more. 
+A collection of minilabs with descriptions behind it. So far, we plan to use a random password generator, find your counselor form, binary search project, and calculator. We want to highlight key collegeboard topics such as procedural abstraction (print function), lists (find your counselor form), conditonals (password generator), and more. 
 
 ### Project Plans/Ideas/Wires
 We plan to utilize Katie's first trimester random password generator as well as similar PBL projects with parallel sections on our website that explains the code behind them. Some of these ideas include redoing and reusing Gabriel's Binary Search project 
