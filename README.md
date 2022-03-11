@@ -5,7 +5,7 @@
 A collection of minilabs with descriptions behind it
 
 ### Project Plans/Ideas/Wires
-We plan to utilize Katie's first trimester random password generator and have a section on our website that explains the code behind it. After this, we plan to make other minilabs and explain the code behind those so users can discover the process behind the webise. 
+We plan to utilize Katie's first trimester random password generator as well as similar PBL projects with parallel sections on our website that explains the code behind them. Some of these ideas include redoing and reusing Gabriel's Binary Search project 
 
 ### Time box
 
