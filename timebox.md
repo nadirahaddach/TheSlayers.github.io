@@ -1,6 +1,6 @@
 {% include navigation.html %}
 
-### Time box
+## Project Time box
 
 | Name          | Requirement   | Tickets | Personal Github Pages |
 | ------------- | ------------- | --------| -------               |
