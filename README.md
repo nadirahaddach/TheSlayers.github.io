@@ -7,6 +7,10 @@ A collection of minilabs with descriptions behind it. So far, we plan to use a r
 ### Project Plans/Ideas/Wires
 We plan to utilize Katie's first trimester random password generator as well as similar PBL projects with parallel sections on our website that explains the code behind them. Some of these ideas include redoing and reusing Gabriel's Binary Search project 
 
-## Sponsor 
+### Sponsor 
 Mr. Mortensen is our sponsor. Our website will somewhat be a Nighthawk Coding Society 2. Contact him by emailing jmortensen@powayusd.com.
- 
+
+### [Scrum Board](https://github.com/nadirahaddach/TheSlayers.github.io/projects/1)
+### [Github Repository](https://github.com/nadirahaddach/TheSlayers.github.io)
+
+
