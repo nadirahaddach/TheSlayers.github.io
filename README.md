@@ -7,15 +7,6 @@ A collection of minilabs with descriptions behind it. So far, we plan to use a r
 ### Project Plans/Ideas/Wires
 We plan to utilize Katie's first trimester random password generator as well as similar PBL projects with parallel sections on our website that explains the code behind them. Some of these ideas include redoing and reusing Gabriel's Binary Search project 
 
-### Time box
-
-| Name          | Week          | Theme             | Tickets | Personal Github Pages | Points  |
-| ------------- | ------------- | ----------------- | ------- | --------------------- | ------- |
-| Gabriel Boudreau       | 1         | Plans, Team, Jobs | [Tasks](https://github.com/nadirahaddach/TheSlayers/issues/assigned/GabrielBoudreau) | [Github Pages](https://gabrielboudreau.github.io/) | -/5 |
-| Nadira Haddach         | 1         | Plans, Team, Jobs | [Tasks](https://github.com/nadirahaddach/TheSlayers/issues/assigned/nadirahaddach)   | [Github Pages](/) | -/5 |
-| Katie Hickman          | 1         | Plans, Team, Jobs | [Tasks](https://github.com/nadirahaddach/TheSlayers/issues/assigned/katiehickman)   | [Github Pages](https://katiehickman.github.io/) | -/5 |
-| Tyler Hickman          | 1         | Plans, Team, Jobs | [Tasks](https://github.com/nadirahaddach/TheSlayers/issues/assigned/Tyler929)   | [Github Pages](https://tyler929.github.io/) | -/5 |
-
 
 ## Team Roles 
 
