@@ -10,6 +10,13 @@ We plan to utilize Katie's first trimester random password generator as well as 
 ### Sponsor 
 Mr. Mortensen is our sponsor. Our website will somewhat be a Nighthawk Coding Society 2. Contact him by emailing jmortensen@powayusd.com.
 
+## Team Review Ticket Timebox
+
+| Review Ticket          | Week          | 
+| -------------          | ------------- |
+| [Ticket](https://github.com/nadirahaddach/TheSlayers.github.io/issues/6) | 1         |
+| [Ticket](https://github.com/nadirahaddach/TheSlayers.github.io/issues/12) | 2         |
+
 ### [Scrum Board](https://github.com/nadirahaddach/TheSlayers.github.io/projects/1)
 ### [Github Repository](https://github.com/nadirahaddach/TheSlayers.github.io)
 
