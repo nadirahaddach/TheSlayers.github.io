@@ -9,6 +9,13 @@
 | Katie Hickman          | Random Password Generator | [Task](https://github.com/nadirahaddach/TheSlayers/issues/assigned/katiehickman)   |
 | Tyler Hickman          | Calculator                | [Task](https://github.com/nadirahaddach/TheSlayers/issues/assigned/Tyler929)   |
 
+<br>
+
+### [Coggle](https://coggle.it/diagram/YjzHqivA9yPIYTpw/t/-)
+### [Wireframe](https://www.canva.com/design/DAE76xtfGkA/D13zxurkjVp3IqPmrqr9Iw/view?utm_content=DAE76xtfGkA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+<br>
+
 ### Random Password Generator
 ```
 <div class="container">
