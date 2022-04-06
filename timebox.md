@@ -16,6 +16,75 @@
 
 <br>
 
+### Find Your _____
+```
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <body class="center">
+    <br>
+    <br>
+    <h2>Find Your Counselor!</h2>
+    <h5>Type your last name to find your counselor!</h5>
+
+    <form method="POST" action="/councelorsearch/">
+        <input type="text" id="lname" name="lname">
+        <input type="submit" value="Submit" onclick="compare({{ input }})">
+    </form>
+    <br>
+    <h4>Your counselor is: </h4><h3 id="counselor"></h3>
+
+    <script>
+        const input = '{{ input }}';
+        let name = input.toUpperCase()
+
+        const char1 = name.charCodeAt(0);
+        let char2;
+        let char3;
+
+        <!-- we dont need to check if the first character is there bec the python does that -->
+
+        if (name.charCodeAt(1).isNaN) {    <!-- if the second character is non existant -->
+            char2 = 0
+        } else {
+            char2 = name.charCodeAt(1)
+        }
+
+        if (name.charCodeAt(2).isNaN) {    <!-- if the third character is non existant -->
+            char3 = 0
+        } else {
+            char3 = name.charCodeAt(2)
+        }
+
+        <!-- uses decimal conversion of each letter one at a time to find where in the alphabet the last name is -->
+
+        if ((char1 < 68) || (char1 <= 68 && char2 < 69) || (char1 <= 68 && char2 <= 69 && char3 <= 76)) {
+            document.getElementById('counselor').innerHTML = "Mrs. Susie Kihneman";
+        } else if (char1 <= 74) {
+            document.getElementById('counselor').innerHTML = "Mr. Tim Roty";
+        } else if ((char1 < 77) || (char1 <= 77 && char2 <= 84)) {
+            document.getElementById('counselor').innerHTML = "Ms. Lauren Kennedy";
+        } else if ((char1 < 83) || (char1 <= 83 && char2 < 72) || (char1 <= 83 && char2 <= 72 && char3 <= 65)) {
+            document.getElementById('counselor').innerHTML = "Mr. Jesse Luna";
+        } else {
+            document.getElementById('counselor').innerHTML = "Mrs. Kathy Marron";
+        }
+    </script>
+
+    <style>
+        body,html,
+        body {
+            color: whitesmoke;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+    </body>
+{% endblock %}
+```
+<br>
+
 ### Random Password Generator
 ```
 <div class="container">
