@@ -18,9 +18,9 @@
 
 ### Find Your _______
 ```
-{% extends "layouts/base.html" %}
 
-{% block body %}
+
+
     <body class="center">
     <br>
     <br>
@@ -81,7 +81,7 @@
         }
     </style>
     </body>
-{% endblock %}
+
 ```
 <br>
 
