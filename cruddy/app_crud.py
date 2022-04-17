@@ -1,6 +1,7 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
-from flask_login import login_required
+# Hack 2: Add logout to CRUD screen
+from flask_login import login_required, logout_user
 
 from cruddy.query import *
 
@@ -55,12 +56,18 @@ def crud_authorize():
         user_name = request.form.get("user_name")
         email = request.form.get("email")
         password1 = request.form.get("password1")
-        password2 = request.form.get("password1")           # password should be verified
-        if authorize(user_name, email, password1):    # zero index [0] used as user_name and email are type tuple
-            return redirect(url_for('crud.crud_login'))
+        password2 = request.form.get("password1")
+        # Hack 1: Add Phone Number to Sign Up / Authorization screen
+        phone = request.form.get("phone")                    # password should be verified
+        if authorize(user_name, email, password1, phone):    # zero index [0] used as user_name and email are type tuple
     # show the auth user page if the above fails for some reason
     return render_template("authorize.html")
 
+# Hack 2: Add logout to CRUD screen
+@app_crud.route('/logout/', methods=["GET", "POST"])
+def crud_logout():
+    logout_user()
+    return render_template("main_page.html")
 
 # CRUD create/add
 @app_crud.route('/create/', methods=["POST"])
@@ -117,6 +124,8 @@ def delete():
 
 # Search Form
 @app_crud.route('/search/')
+# Hack 3: Add login_required to another portion of the project
+@login_required  # Flask-Login uses this decorator to restrict acess to logged in users
 def search():
     """loads form to search Users data"""
     return render_template("search.html")

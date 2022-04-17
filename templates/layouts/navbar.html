@@ -1,0 +1,41 @@
+<!-- Navigation Bar from bootstrap
+This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
+-->
+<nav
+        class="navbar navbar-expand-lg" class="navbar navbar-light" class="text-light" style="background-color:pink;">
+  <a class="navbar-brand" href="" style="color: white">{{name}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="container-fluid">
+    <div class="btn-group">
+      <a class="navbar-brand" href="https://nighthawkcodingsociety.com"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
+          <script async src="https://cse.google.com/cse.js?cx=e6261de5d7711b175"></script>
+          <div class="gcse-search"></div>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}" style="color: white">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" style="color: white">
+              Learn About Code!
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <a class="nav-link" href="{{ url_for('password') }}"Random Password Generator</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" >
+              CRUD
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <a class="dropdown-item" href="/crud">CRUD</a>
+            </div>
+
+          </li>
+
+        </ul>
+      </div>
+    </div>

@@ -1,0 +1,48 @@
+
+<!-- Custom file for standardizing Project Data
+This HTML is setup as as a Jinja2 layout, coders use layouts for:
+ ... standardization of style
+ ... setting expectations for data
+ ... code reuse
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+
+{% set name = "Nighthawk Coding Society 2" %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>{{ name }} | {{ project }} </title>
+
+    {% block meta %}
+    {% endblock %}
+
+</head>
+
+
+{% include "layouts/navbar.html" %}
+
+{% block body %}
+
+
+<div class="product" style="margin-top: 2%;">
+    <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
+
+
+    </div>
+</div>
+{% endblock %}
+
+
+</html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous" ></script>
+<!-- JQuery CSS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+

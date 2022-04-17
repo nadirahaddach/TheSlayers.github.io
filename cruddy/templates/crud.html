@@ -15,6 +15,10 @@
 <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">SQL CRUD Admin Page</span>
+        <!-- Hack 2: Add logout to CRUD screen -->
+        <form style="margin-left: 15px" action={{url_for('crud.crud_logout')}}>
+            <input type="submit" value="Log Out" />
+        </form>
     </header>
 </div>
 <div class="container py-4 text-light bg-success">
