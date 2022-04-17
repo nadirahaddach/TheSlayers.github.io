@@ -92,7 +92,7 @@ def user_loader(user_id):
         return Users.query.get(user_id)
     return None
 
-# Hack 1: Add Phone Number to Sign Up / Authorization screen
+# Hack 1 Katie and Nadira: Add Phone Number to Sign Up / Authorization screen
 # Authorise new user requires user_name, email, password
 def authorize(name, email, password, phone):
     if is_user(email, password):
