@@ -1,0 +1,131 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        input[type=checkbox] {
+            margin-right: 0;
+        }
+
+        .container1 {
+            background-color: lavender;
+            box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            width: 40%;
+            text-align: center;
+            float: left;
+        }
+
+        .container2 {
+            background-color: #F8CBC3;
+            box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            width: 40%;
+            text-align: center;
+            float: right;
+        }
+
+        textarea {
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            font-size: 18px;
+            letter-spacing: 1px;
+            padding: 12px 10px;
+            height: 50px;
+            width: 37%;
+            word-wrap: break-word;
+        }
+
+        .btn {
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 8px 12px;
+            background-color: #DE978A;
+        }
+
+        .btn-large {
+            display: block;
+            width: 100%;
+        }
+
+        .setting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .button {
+            position: relative;
+            margin-left: 83%;
+            font-family: Baskerville;
+
+        }
+
+</style>
+<body class="center">
+    <br>
+    <br>
+    <div class="container1" style="margin-left: 20px; width: 650px">
+        <h2>Find Your ______!</h2>
+        <h5>Type your last name to find your ______!</h5>
+        <form method="POST" action="/findyour/">
+            <input type="text" id="lname" name="lname">
+            <input type="submit" value="Submit" onclick="compare({{ input }})">
+        </form>
+        <br>
+        <h4>Your ______ is: </h4><h3 id="counselor"></h3>
+</div>
+
+    <script>
+        const input = '{{ input }}';
+        let name = input.toUpperCase()
+
+        const char1 = name.charCodeAt(0);
+        let char2;
+        let char3;
+
+        <!-- we dont need to check if the first character is there bec the python does that -->
+
+        if (name.charCodeAt(1).isNaN) {    <!-- if the second character is non existant -->
+            char2 = 0
+        } else {
+            char2 = name.charCodeAt(1)
+        }
+
+        if (name.charCodeAt(2).isNaN) {    <!-- if the third character is non existant -->
+            char3 = 0
+        } else {
+            char3 = name.charCodeAt(2)
+        }
+
+        <!-- uses decimal conversion of each letter one at a time to find where in the alphabet the last name is -->
+
+        if ((char1 < 68) || (char1 <= 68 && char2 < 69) || (char1 <= 68 && char2 <= 69 && char3 <= 76)) {
+            document.getElementById('counselor').innerHTML = "A - Del";
+        } else if (char1 <= 74) {
+            document.getElementById('counselor').innerHTML = "Dem - J";
+        } else if ((char1 < 77) || (char1 <= 77 && char2 <= 84)) {
+            document.getElementById('counselor').innerHTML = "K - Mt";
+        } else if ((char1 < 83) || (char1 <= 83 && char2 < 72) || (char1 <= 83 && char2 <= 72 && char3 <= 65)) {
+            document.getElementById('counselor').innerHTML = "Mu - Sha";
+        } else {
+            document.getElementById('counselor').innerHTML = "She - Z";
+        }
+    </script>
+
+</body>
+
+
+{% endblock %}
