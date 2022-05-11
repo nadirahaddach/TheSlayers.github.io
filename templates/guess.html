@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block meta %}
+{% endblock %}
+
+{% block content %}
+<body class="bg-Idea3-bg" xmlns="http://www.w3.org/1999/html">
+    <div><p>Welcome to Gabe's Minigame</p></div>
+    <div><p>This minigame relates to the College Board 3.11 topic: Binary Search. Binary search is a searching method used to locate
+    an item in a sorted list that is faster than a linear search. It works by dividing the list in half, then searching the half with the
+    item by dividing it in half again until only the key term is left.</p></div>
+    <br><br>
+    <div><p>Try to guess the random number between 1 and 100 in as few guesses as possible by using this method!</p></div>
+    <div>
+        <p id="result"></p>
+    </div>
+    <div>
+        <label for="answer" class="button"></label>
+        <input name="answer" id="answer">
+        <button class="button" onclick="check()">Submit</button>
+        <input type="button" value="Restart" onclick="randomizer();"/>
+    </div>
+</body>
+
+    <script>
+        let a = Math.round(Math.random()*100)
+        let b = "0"
+        let upperbound = 100
+        let lowerbound = 0
+        let playerValue = ""
+        let binarySearchValue = ((upperbound+lowerbound)/2)
+        let computerAttempts = 0
+        let attempts = 0
+
+        function randomizer(){
+            a = Math.round(Math.random()*100)
+            attempts = 0
+            document.getElementById("result").innerHTML = ("")
+            b = "0"
+            computerAttempts = 0
+        }
+        function check() {
+            playerValue = document.getElementById("answer").value;
+            if (playerValue<0 || playerValue>100){
+                document.getElementById("result").innerHTML = ("Not in domain, choose a number between 1-100")
+                return check()
+            }
+            if (playerValue == a) {
+                attempts = (attempts + 1)
+                for (let i = 0; i < 7; i++) {
+                    binarySearch()
+                }
+                document.getElementById("result").innerHTML = ("Correct! You took " + attempts + " tries to find " +
+                    "the answer. Binary search took " + (computerAttempts) + " tries.")
+            }
+
+            if (playerValue < a){
+                attempts = (attempts+1)
+                document.getElementById("result").innerHTML = ("Too low, try again. This was your " + attempts + " try")
+            }
+            if (playerValue > a) {
+                attempts = (attempts + 1)
+                document.getElementById("result").innerHTML = ("Too high, try again. This was your " + attempts + " try")
+            }
+        }
+        function binarySearch(){
+            if (binarySearchValue == a){
+                computerAttempts = (computerAttempts+1)
+                if (b=1){
+                    computerAttempts = (computerAttempts-1)
+                }
+                b=1
+            }
+            if (binarySearchValue < a){
+                computerAttempts = (computerAttempts+1)
+                lowerbound = binarySearchValue
+                binarySearchValue = Math.round((upperbound+lowerbound)/2)
+            }
+            if (binarySearchValue > a){
+                computerAttempts = (computerAttempts+1)
+                upperbound = binarySearchValue
+                binarySearchValue = Math.round((upperbound+lowerbound)/2)
+            }
+        }
+    </script>
+{% endblock %}
