@@ -1,5 +1,29 @@
 {% extends "layouts/base.html" %}
+<body>
 {% block body %}
-<p>Welcome to Our Website</p>
+<br>
+<br>
+<br>
+<br>
+<p style="font-family: Baskerville; font-size: xxx-large; color: white; text-align: center">Nighthawk Coding Society 2</p>
 
+{% block background %}
+<script src="{{ url_for('static', filename='p5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vanta.topology.min.js') }}"></script>
+<script>
+    VANTA.TOPOLOGY({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 2000.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xf38cac,
+        backgroundColor: 0xf4c2c2
+    })
+</script>
+{% endblock %}
+</body>
 {% endblock %}
