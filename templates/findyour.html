@@ -20,11 +20,12 @@
             padding: 15px;
             width: 40%;
             text-align: center;
+            font-family: Baskerville;
             float: left;
         }
 
         .container2 {
-            background-color: #F8CBC3;
+            background-color: lavender;
             box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.2);
             padding: 15px;
             width: 40%;
@@ -74,18 +75,29 @@
         }
 
 </style>
+
 <body class="center">
-    <br>
-    <br>
+<br>
+<br>
+
+<h1 style="font-size: xxx-large; text-align: center; font-family: Baskerville"> Find Your ______</h1>
+
+<br>
+<br>
+
     <div class="container1" style="margin-left: 20px; width: 650px">
         <h2>Find Your ______!</h2>
-        <h5>Type your last name to find your ______!</h5>
+        <h5>Type your ________ to find your ______!</h5>
         <form method="POST" action="/findyour/">
             <input type="text" id="lname" name="lname">
             <input type="submit" value="Submit" onclick="compare({{ input }})">
         </form>
         <br>
         <h4>Your ______ is: </h4><h3 id="counselor"></h3>
+</div>
+
+<div class="container2" style="margin-right: 80px; width: 650px">
+    <p style="font-family: Baskerville; font-size: x-large; text-align: center">How Does the Code Work?</p>
 </div>
 
     <script>
