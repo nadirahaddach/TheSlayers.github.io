@@ -15,6 +15,11 @@ def home():
 def password():
     return render_template("password.html")
 
+
+@app.route('/guess')
+def guess():
+    return render_template("guess.html")
+
 @app.route('/findyour/', methods=['GET', 'POST'])
 def findyour():
     if request.form:
