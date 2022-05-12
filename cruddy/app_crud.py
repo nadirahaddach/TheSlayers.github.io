@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, request, url_for, redirect, jsonif
 # Hack 2 Katie and Nadira: Add logout to CRUD screen
 from flask_login import login_required, logout_user
 
-from cruddy.query import *
+from crud.query import *
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
